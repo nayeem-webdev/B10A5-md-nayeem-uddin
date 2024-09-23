@@ -9,6 +9,7 @@ document.getElementById("donateBtn").addEventListener("click", function () {
     historyBtn.classList.remove("bg-primary", "text-gray-800")
     historyBtn.classList.add("text-primary")
   }
+  showHide("historyDiv", "donationDiv")
 });
 
 document.getElementById("historyBtn").addEventListener("click", function () {
@@ -20,7 +21,7 @@ document.getElementById("historyBtn").addEventListener("click", function () {
     donateBtn.classList.remove("bg-primary", "text-gray-800")
     donateBtn.classList.add("text-primary")
   }
-  
+  showHide("donationDiv", "historyDiv")
 });
 
 // * NK DONATION

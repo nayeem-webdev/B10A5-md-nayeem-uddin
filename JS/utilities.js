@@ -12,3 +12,10 @@ function inputToNum(id) {
   return Number(i);
 }
 
+// Toggle Button Show / Hide
+function showHide(id1, id2) {
+  document.getElementById(id1).classList.add("hidden");
+  document.getElementById(id1).classList.remove("block");
+  document.getElementById(id2).classList.add("block");
+  document.getElementById(id2).classList.remove("hidden");
+}
