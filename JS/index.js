@@ -1,15 +1,27 @@
+// Donation History Button Toggle
 
+document.getElementById("donateBtn").addEventListener("click", function () {
+  const donateBtn = document.getElementById("donateBtn");
+  const historyBtn = document.getElementById("historyBtn");
+  if (donateBtn.classList.contains("text-primary")) {
+    donateBtn.classList.add("bg-primary", "text-gray-800")
+    donateBtn.classList.remove("text-primary")
+    historyBtn.classList.remove("bg-primary", "text-gray-800")
+    historyBtn.classList.add("text-primary")
+  }
+});
 
-
-
-
-
-
-
-
-
-
-
+document.getElementById("historyBtn").addEventListener("click", function () {
+  const donateBtn = document.getElementById("donateBtn");
+  const historyBtn = document.getElementById("historyBtn");
+  if (historyBtn.classList.contains("text-primary")) {
+    historyBtn.classList.add("bg-primary", "text-gray-800")
+    historyBtn.classList.remove("text-primary")
+    donateBtn.classList.remove("bg-primary", "text-gray-800")
+    donateBtn.classList.add("text-primary")
+  }
+  
+});
 
 // * NK DONATION
 document.getElementById("nkDonationBtn").addEventListener("click", function () {
@@ -28,8 +40,7 @@ document.getElementById("nkDonationBtn").addEventListener("click", function () {
     nkDonationAmount + nkDonationTotal;
   document.getElementById("accountBalance").innerText =
     accountBalance - nkDonationAmount;
-    document.getElementById("nkDonationAmount").value = "";
-
+  document.getElementById("nkDonationAmount").value = "";
 });
 
 // * FENI DONATION
@@ -51,8 +62,7 @@ document
       feniDonationAmount + feniDonationTotal;
     document.getElementById("accountBalance").innerText =
       accountBalance - feniDonationAmount;
-      document.getElementById("feniDonationAmount").value = "";
-
+    document.getElementById("feniDonationAmount").value = "";
   });
 
 // * QUOTA DONATION

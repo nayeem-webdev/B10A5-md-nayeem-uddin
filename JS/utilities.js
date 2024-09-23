@@ -12,9 +12,3 @@ function inputToNum(id) {
   return Number(i);
 }
 
-// Clear Input Fill
-function clearInput(id) {
-    document.getElementById(id1).value = '';
-    document.getElementById(id2).value = '';
-    document.getElementById(id3).value = '';
-  }
