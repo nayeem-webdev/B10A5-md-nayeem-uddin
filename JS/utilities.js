@@ -20,13 +20,28 @@ function showHide(id1, id2) {
   document.getElementById(id2).classList.remove("hidden");
 }
 
+
+BackWard
 let lastTransElement = null;
 function lastTrans(container, element) {
   let historyBox = document.getElementById(container);
-  if (lastTransElement) {
+  if (lastTransElement) {V
     historyBox.insertBefore(element, lastTransElement);
   } else {
     historyBox.appendChild(element);
   }
   lastTransElement = element;
+}
+
+
+// MODAL OPEN CLOSE
+function openModal(modalID, closeButtonID,) {
+  let modal = document.getElementById(modalID)
+  let closeModal = document.getElementById(closeButtonID)
+
+  modal.classList.remove("hidden")
+  // close
+  closeModal.addEventListener("click", function () {
+      modal.classList.add("hidden")
+  })
 }
