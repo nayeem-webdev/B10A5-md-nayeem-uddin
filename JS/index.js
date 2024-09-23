@@ -24,6 +24,11 @@ document.getElementById("historyBtn").addEventListener("click", function () {
   showHide("donationDiv", "historyDiv");
 });
 
+// Blog Page Re-Direct
+document.getElementById("blogPage").addEventListener("click", function (event) {
+  window.location.href = "blog.html";
+});
+
 // * NK DONATION
 document.getElementById("nkDonationBtn").addEventListener("click", function () {
   const nkDonationAmount = inputToNum("nkDonationAmount");
