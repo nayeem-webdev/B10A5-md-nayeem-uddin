@@ -21,11 +21,11 @@ function showHide(id1, id2) {
 }
 
 
-BackWard
+// History Backward
 let lastTransElement = null;
 function lastTrans(container, element) {
   let historyBox = document.getElementById(container);
-  if (lastTransElement) {V
+  if (lastTransElement) {
     historyBox.insertBefore(element, lastTransElement);
   } else {
     historyBox.appendChild(element);

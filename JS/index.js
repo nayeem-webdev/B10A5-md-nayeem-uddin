@@ -1,4 +1,4 @@
-// Donation History Button Toggle
+// * Donation History Button Toggle
 
 document.getElementById("donateBtn").addEventListener("click", function () {
   const donateBtn = document.getElementById("donateBtn");
@@ -24,7 +24,7 @@ document.getElementById("historyBtn").addEventListener("click", function () {
   showHide("donationDiv", "historyDiv");
 });
 
-// Blog Page Re-Direct
+// * Blog Page Re-Direct
 document.getElementById("blogPage").addEventListener("click", function (event) {
   window.location.href = "blog.html";
 });
@@ -36,10 +36,10 @@ document.getElementById("nkDonationBtn").addEventListener("click", function () {
   const accountBalance = idToNum("accountBalance");
 
   if (nkDonationAmount <= 0) {
-    console.log("invalid Donation Amount");
+    openModal("invalidAmountModal", "closeInvalidAmount")
     return;
   } else if (accountBalance < nkDonationAmount) {
-    console.log("insufficient Amount");
+    openModal("insufficientAmountModal", "closeInsufficientAmount");
     return;
   }
   document.getElementById("nkDonationTotal").innerText =
@@ -67,10 +67,10 @@ document
     const accountBalance = idToNum("accountBalance");
 
     if (feniDonationAmount <= 0) {
-      console.log("invalid Donation Amount");
+      openModal("invalidAmountModal", "closeInvalidAmount")
       return;
     } else if (accountBalance < feniDonationAmount) {
-      console.log("insufficient Amount");
+      openModal("insufficientAmountModal", "closeInsufficientAmount");
       return;
     }
     document.getElementById("feniDonationTotal").innerText =
@@ -97,10 +97,10 @@ document
     const accountBalance = idToNum("accountBalance");
 
     if (quotaDonationAmount <= 0) {
-      console.log("invalid Donation Amount");
+      openModal("invalidAmountModal", "closeInvalidAmount")
       return;
     } else if (accountBalance < quotaDonationAmount) {
-      console.log("insufficient Amount");
+      openModal("insufficientAmountModal", "closeInsufficientAmount");
       return;
     }
     document.getElementById("quotaDonationTotal").innerText =
@@ -118,3 +118,5 @@ document
 
     lastTrans("historyContainer", newHistory);
   });
+
+// * 
