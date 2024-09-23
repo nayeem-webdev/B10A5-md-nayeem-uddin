@@ -19,3 +19,14 @@ function showHide(id1, id2) {
   document.getElementById(id2).classList.add("block");
   document.getElementById(id2).classList.remove("hidden");
 }
+
+let lastTransElement = null;
+function lastTrans(container, element) {
+  let historyBox = document.getElementById(container);
+  if (lastTransElement) {
+    historyBox.insertBefore(element, lastTransElement);
+  } else {
+    historyBox.appendChild(element);
+  }
+  lastTransElement = element;
+}

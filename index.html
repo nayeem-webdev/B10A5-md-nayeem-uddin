@@ -14,6 +14,7 @@
               primary50: "rgba(162, 213, 198, 0.3)",
               accent: "#F9E79F",
               textPri: "#34495E",
+              textSec: "#34495E99",
             },
           },
         },
@@ -266,9 +267,21 @@
           </div>
         </div>
       </div>
-      <div id="historyDiv" class="hidden">
-        <div class="container mx-auto p-8 gap-8 flex flex-col lg:flex-row border-2 mt-10 rounded-xl"></div>
-        <H1>HISTORY</H1>
+      <!--  class="hidden" -->
+      <div id="historyDiv">
+        <div class="container mx-auto">
+          <div>
+            <H1 class="text-2xl font-bold mt-10">Donation History</H1>
+            <div></div>
+          </div>
+          <div id="historyContainer">
+            <!-- <div class="p-8 border-2 mt-4 rounded-xl">
+              <p class="text-xl font-bold"><span class="text-lime-500">96500 Taka </span>is Donated for - Donate for Flood Relief in Feni,Bangladesh
+              </p>
+              <p class="text-textPri mt-3">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+            </div> -->
+          </div>
+        </div>
       </div>
     </main>
     <footer class="bg-primary50 mt-20">
