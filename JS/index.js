@@ -6,7 +6,7 @@ document.getElementById("closeWelcome").addEventListener("click", function(){
 // History sort
 document.getElementById("sort").addEventListener("change", function (event) {
   event.preventDefault()
-  sortHistory("sort", "oldestFirst", "recentFirst", "historyContainer", "p", "historyContainer2")
+  sortHistory("sort", "oldestFirst", "recentFirst", "historyContainer", "div", "historyContainer2")
 })
 
 // * Donation History Button Toggle
