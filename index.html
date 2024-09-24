@@ -255,11 +255,25 @@
       <!--  class="hidden" -->
       <div id="historyDiv" class="hidden">
         <div class="container mx-auto">
-          <div>
+          <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold mt-10">Donation History</h1>
-            <div></div>
+            <div class="flex gap-2 justify-center items-center">
+                <label class="font-bold text-md" for="sortByTime">Sort by Time: </label>
+                <select class="border-2 rounded-md outline-primary py-1 pr-2" id="sort">
+                    <option value="recentFirst" selected>Recent First</option>
+                    <option value="oldestFirst"> Oldest First</option>
+                </select>
+            </div>
+            </div>
+          <div id="historyContainer" class="h-28">
+            <!-- Sample History -->
+            <!-- <div class="p-8 border-2 mt-4 rounded-xl">
+              <p class="text-xl font-bold"><span class="text-lime-500">96500 Taka </span>is Donated for - Donate for Flood Relief in Feni,Bangladesh
+              </p>
+              <p class="text-textPri mt-3">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+            </div> -->
           </div>
-          <div id="historyContainer">
+          <div id="historyContainer2">
             <!-- Sample History -->
             <!-- <div class="p-8 border-2 mt-4 rounded-xl">
               <p class="text-xl font-bold"><span class="text-lime-500">96500 Taka </span>is Donated for - Donate for Flood Relief in Feni,Bangladesh
