@@ -3,6 +3,12 @@ document.getElementById("closeWelcome").addEventListener("click", function(){
   document.getElementById("welcomeModal").classList.add("hidden")
 })
 
+// History sort
+document.getElementById("sort").addEventListener("change", function (event) {
+  event.preventDefault()
+  sortHistory("sort", "oldestFirst", "recentFirst", "historyContainer", "p", "historyContainer2")
+})
+
 // * Donation History Button Toggle
 document.getElementById("donateBtn").addEventListener("click", function () {
   const donateBtn = document.getElementById("donateBtn");
