@@ -42,24 +42,53 @@
               id="homePage"
               class="py-3 px-5 md:px-8 font-bold bg-accent rounded-lg"
             >
-              H<span class="hidden md:block">ome</span>
+              <span class="hidden sm:block">Home</span>
+              <span class="block sm:hidden">H</span>
             </button>
           </div>
           <div class="flex items-center gap-4">
-            <img class="w-8 md:w-full" src="./assets/logo.png" alt="Logo Icon" />
-            <p class="hidden md:block font-bold text-xl">GiftChange</p>
+            <img
+              class="w-8 sm:w-full"
+              src="./assets/logo.png"
+              alt="Logo Icon"
+            />
+            <p class="hidden sm:block font-bold text-xl">GiftChange</p>
           </div>
-          <div class="font-bold text-textPri flex flex-col md:flex-row items-center gap-1 text-xl">
+          <div
+            class="font-bold text-textPri flex flex-col sm:flex-row items-center gap-1 text-xl"
+          >
             <img class="mr-2" src="./assets/coin.png" alt="Coin" />
             <span id="accountBalance">55000</span>
-            <span class="hidden md:block">BDT</span>
+            <span class="hidden sm:block">BDT</span>
           </div>
         </nav>
       </div>
     </header>
     <main class="pt-28 container mx-auto px-5">
-      <h1>Welcome To Blog Cum DOM FAQ</h1>
-      <div class="bg-gray-300 p-5 rounded-xl mt-5">
+      <div
+        class="container mx-auto rounded-xl bg-cover bg-no-repeat bg-center py-40 px-10 flex flex-col justify-center"
+        style="
+          background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.4)
+            ),
+            url('./assets/blogHero.jpg');
+        "
+      >
+        <h1
+          class="text-white font-extrabold text-4xl lg:text-7xl text-center leading-tight"
+        >
+          KNOW ABOUT DOM
+        </h1>
+        <p class="text-white w-full lg:w-2/3 text-center mx-auto mt-5">
+          The Document Object Model (DOM) is a cross-platform and
+          language-independent interface that treats an HTML or XML document as
+          a tree structure wherein each node is an object representing a part of
+          the document.
+        </p>
+      </div>
+      <div class="bg-gray-300 p-5 rounded-xl mt-20">
         <h1
           onclick="openAccordion(this)"
           class="cursor-pointer text-2xl font-bold"
@@ -138,7 +167,7 @@
           We can also set attribute to the dom elements like id, disabled, &
           type. we can use functions like getAttribute() = to get value of
           attribute, setAttribute() = to set attribute for an element and
-          removeAttribute() = to remove attribute of an element. 
+          removeAttribute() = to remove attribute of an element.
         </p>
       </div>
     </main>
