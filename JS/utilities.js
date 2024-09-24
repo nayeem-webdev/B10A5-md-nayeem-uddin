@@ -32,6 +32,29 @@ function lastTrans(container, element) {
   lastTransElement = element;
 }
 
+// History latest/oldest
+function sortHistory(select, option1, option2, container1, childTag, container2) {
+  const selectValue = document.getElementById(select).value
+  const containerOne = document.getElementById(container1)
+  const containerTwo = document.getElementById(container2)
+  const childTags = containerOne.getElementsByTagName(childTag)
+
+  if (selectValue === option1) {
+    containerTwo.innerHTML = "";
+    for (i = childTags.length - 1; i >= 0; i--) {
+      let cloneElement = childTags[i].cloneNode(true);
+      containerTwo.appendChild(cloneElement)
+
+      containerOne.classList.add("hidden")
+      containerTwo.classList.remove("hidden")
+
+    }
+  } else if (option2 === selectValue){
+    containerOne.classList.remove("hidden")
+    containerTwo.classList.add("hidden")
+  }
+}
+
 // MODAL OPEN CLOSE
 function openModal(modalID, closeButtonID) {
   let modal = document.getElementById(modalID);
