@@ -1,5 +1,5 @@
+// alert("hello world")
 // * Donation History Button Toggle
-
 document.getElementById("donateBtn").addEventListener("click", function () {
   const donateBtn = document.getElementById("donateBtn");
   const historyBtn = document.getElementById("historyBtn");
@@ -36,7 +36,7 @@ document.getElementById("nkDonationBtn").addEventListener("click", function () {
   const accountBalance = idToNum("accountBalance");
 
   if (nkDonationAmount <= 0) {
-    openModal("invalidAmountModal", "closeInvalidAmount")
+    openModal("invalidAmountModal", "closeInvalidAmount");
     return;
   } else if (accountBalance < nkDonationAmount) {
     openModal("insufficientAmountModal", "closeInsufficientAmount");
@@ -56,6 +56,8 @@ document.getElementById("nkDonationBtn").addEventListener("click", function () {
             <p class="text-textSec mt-3">Date: ${new Date().toString()}</p>`;
 
   lastTrans("historyContainer", newHistory);
+
+  openModal("donationModal", "closeDonationConfirm");
 });
 
 // * FENI DONATION
@@ -67,7 +69,7 @@ document
     const accountBalance = idToNum("accountBalance");
 
     if (feniDonationAmount <= 0) {
-      openModal("invalidAmountModal", "closeInvalidAmount")
+      openModal("invalidAmountModal", "closeInvalidAmount");
       return;
     } else if (accountBalance < feniDonationAmount) {
       openModal("insufficientAmountModal", "closeInsufficientAmount");
@@ -86,6 +88,8 @@ document
             <p class="text-textSec mt-3">Date: ${new Date().toString()}</p>`;
 
     lastTrans("historyContainer", newHistory);
+
+    openModal("donationModal", "closeDonationConfirm");
   });
 
 // * QUOTA DONATION
@@ -97,7 +101,7 @@ document
     const accountBalance = idToNum("accountBalance");
 
     if (quotaDonationAmount <= 0) {
-      openModal("invalidAmountModal", "closeInvalidAmount")
+      openModal("invalidAmountModal", "closeInvalidAmount");
       return;
     } else if (accountBalance < quotaDonationAmount) {
       openModal("insufficientAmountModal", "closeInsufficientAmount");
@@ -117,6 +121,63 @@ document
             <p class="text-textSec mt-3">Date: ${new Date().toString()}</p>`;
 
     lastTrans("historyContainer", newHistory);
+
+    openModal("donationModal", "closeDonationConfirm");
   });
 
-// * 
+// * Recharge Modal
+document
+  .getElementById("rechargeAmountBtn")
+  .addEventListener("click", function () {
+    openModal("rechargeModal", "rechargeModalClose");
+  });
+
+// * Recharge
+document
+  .getElementById("rechargeNowBtn")
+  .addEventListener("click", function () {
+    const accountBalance = idToNum("accountBalance");
+    const rechargeAmount = inputToNum("rechargeAmount");
+    if (
+      inputValidate("rechargeAmount", "cardNumber", "vcc", "expiryDate") === 1
+    ) {
+      openModal("rechargeFieldModal", "closeRechargeField");
+    } else if (
+      inputValidate("rechargeAmount", "cardNumber", "vcc", "expiryDate") === 2
+    ) {
+      document.getElementById("accountBalance").innerText =
+        accountBalance + rechargeAmount;
+
+      let newHistory = document.createElement("div");
+      newHistory.classList.add("p-8", "border-2", "mt-4", "rounded-xl");
+      newHistory.innerHTML = `
+            <p class="text-xl font-bold"><span class="text-lime-500">${rechargeAmount} Taka</span> has been recharged to your account</p>
+            <p class="text-textSec mt-3">Date: ${new Date().toString()}</p>`;
+
+      document.getElementById("rechargeModal").classList.add("hidden");
+      document
+        .getElementById("insufficientAmountModal")
+        .classList.add("hidden");
+
+      lastTrans("historyContainer", newHistory);
+
+      openModal("rechargeConfirmModal", "closeRechargeConfirm");
+    } else {
+      openModal("rechargeInvalidModal", "closeRechargeInvalid");
+    }
+  });
+
+// document.getElementById("rechargeNowBtn").addEventListener("click", function(){
+//   let rechargeAmount = document.getElementById("rechargeAmount")
+//   let rechargeAmountNum = Number(rechargeAmount.value)
+//   let cardNumber = document.getElementById("cardNumber").value
+//   let vcc = document.getElementById("vcc").value
+
+//   if(inputValidate("rechargeAmount", "cardNumber", "vcc", "expiryDate")){
+//     console.log("fill")
+//   } else if(rechargeAmountNum > 0 && cardNumber.length === 16 && vcc.length === 3){
+//     console.log("success")
+//   } else {
+//     console.log("vul")
+//   }
+// });

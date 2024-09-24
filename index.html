@@ -38,7 +38,10 @@
           class="container mx-auto flex justify-between items-center py-4 px-5"
         >
           <div>
-            <button id="blogPage" class="py-3 px-8 font-bold bg-accent rounded-lg">
+            <button
+              id="blogPage"
+              class="py-3 px-8 font-bold bg-accent rounded-lg"
+            >
               Blog
             </button>
           </div>
@@ -271,7 +274,7 @@
       <div id="historyDiv" class="hidden">
         <div class="container mx-auto">
           <div>
-            <H1 class="text-2xl font-bold mt-10">Donation History</H1>
+            <h1 class="text-2xl font-bold mt-10">Donation History</h1>
             <div></div>
           </div>
           <div id="historyContainer">
@@ -295,105 +298,226 @@
     <main>
       <!-- DONATION MODAL -->
       <div class="hidden" id="donationModal">
-          <div class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center">
-              <div
-                  class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px] h-[320px] flex flex-col items-center justify-center gap-3">
-                  <h1 class="font-extrabold text-4xl">Congrates!</h1>
-                  <img src="./assets/coin.png" alt="">
-                  <p>Thanks for your generous donation to Humankind!</p>
-                  <p class="text-xl font-bold">Successfully</p>
-                  <button id="closeDonationConfirm"
-                      class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md">Close
-                      Confirmation</button>
-              </div>
+        <div
+          class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+        >
+          <div
+            class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px] h-[320px] flex flex-col items-center justify-center gap-3"
+          >
+            <h1 class="font-extrabold text-4xl">Congrates!</h1>
+            <img src="./assets/coin.png" alt="" />
+            <p>Thanks for your generous donation to Humankind!</p>
+            <p class="text-xl font-bold">Donation Successful!</p>
+            <button
+              id="closeDonationConfirm"
+              class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md"
+            >
+              Close Confirmation
+            </button>
           </div>
+        </div>
       </div>
-      <!-- INVALID MODAL -->
+      <!-- INVALID AMOUNT MODAL -->
       <div class="hidden" id="invalidAmountModal">
-          <div class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center">
-              <div
-                  class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px] h-[280px] flex flex-col items-center justify-center gap-3">
-                  <h1 class="font-extrabold text-4xl">Invalid Amount!</h1>
-                  <p class="font-xl text-accent text-5xl"><i class="fa-solid fa-circle-exclamation"></i></p>
-                  <p>"Please verify your Amount field and try again!</p>
-                  <button id="closeInvalidAmount"
-                      class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md">Close</button>
-              </div>
+        <div
+          class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+        >
+          <div
+            class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px] h-[280px] flex flex-col items-center justify-center gap-3"
+          >
+            <h1 class="font-extrabold text-4xl">Invalid Amount!</h1>
+            <p class="font-xl text-accent text-5xl">
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </p>
+            <p>"Please verify your Amount field and try again!</p>
+            <button
+              id="closeInvalidAmount"
+              class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md"
+            >
+              Close
+            </button>
           </div>
+        </div>
       </div>
       <!-- Insufficient MODAL -->
       <div class="hidden" id="insufficientAmountModal">
-          <div class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center">
-              <div
-                  class="bg-white shadow-xl rounded-lg p-6 w-[90%] sm:w-[430px] flex flex-col items-center justify-center gap-3">
-                  <h1 class="font-extrabold text-3xl text-center">Insufficient Balance!</h1>
-                  <p class="font-xl text-accent text-5xl"><i class="fa-solid fa-circle-exclamation"></i></p>
-                  <p class="text-center text-textPri">Please recharge your account to donate again!</p>
-                  <div><button id="closeInsufficientAmount"
-                          class="mr-3 bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md">Close</button>
-                      <button id="rechargeAmountBtn"
-                          class="bg-primary hover:bg-primary50 font-bold mt-3 py-3 px-6 rounded-md">Recharge</button>
-                  </div>
-              </div>
+        <div
+          class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+        >
+          <div
+            class="bg-white shadow-xl rounded-lg p-6 w-[90%] sm:w-[430px] flex flex-col items-center justify-center gap-3"
+          >
+            <h1 class="font-extrabold text-3xl text-center">
+              Insufficient Balance!
+            </h1>
+            <p class="font-xl text-accent text-5xl">
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </p>
+            <p class="text-center text-textPri">
+              Please recharge your account to donate again!
+            </p>
+            <div>
+              <button
+                id="closeInsufficientAmount"
+                class="mr-3 bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md"
+              >
+                Close
+              </button>
+              <button
+                id="rechargeAmountBtn"
+                class="bg-primary hover:bg-primary50 font-bold mt-3 py-3 px-6 rounded-md"
+              >
+                Recharge
+              </button>
+            </div>
           </div>
+        </div>
       </div>
       <!-- Recharge MODAL -->
       <div class="hidden" id="rechargeModal">
-          <div class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center">
-              <div class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px]">
-                  <div class="flex justify-between items-center">
-                      <h1 class="font-extrabold text-xl">Recharge Your Account</h1>
-                      <p id="rechargeModalClose" class="hover:bg-gray-50 cursor-pointer w-8 h-8 rounded-full flex justify-center items-center border-[1px] shadow-sm"><i class="fa-solid fa-x"></i></p>
-                  </div>
+        <div
+          class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+        >
+          <div class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px]">
+            <div class="flex justify-between items-center">
+              <h1 class="font-extrabold text-xl">Recharge Your Account</h1>
+              <p
+                id="rechargeModalClose"
+                class="hover:bg-gray-200 cursor-pointer w-8 h-8 rounded-full flex justify-center items-center border-[1px] shadow-sm"
+              >
+                <i class="fa-solid fa-x"></i>
+              </p>
+            </div>
 
-                  <div class="mt-4 mb-4">
-                      <label class=" text-textPri font-semibold mb-2">Amount</label>
-                      <input id="rechargeAmount" type="number" class="w-full p-3 border border-gray-300 rounded-md"
-                          placeholder="Enter amount">
-                  </div>
+            <div class="mt-4 mb-4">
+              <label class="text-textPri font-semibold mb-2">Amount</label>
+              <input
+                id="rechargeAmount"
+                type="number"
+                class="w-full p-3 border border-gray-300 rounded-md"
+                placeholder="Enter amount"
+              />
+            </div>
 
-                  <div class="mb-4">
-                      <label class=" text-textPri font-semibold mb-2">Card Number</label>
-                      <input id="cardNumber" type="number" class="w-full p-3 border border-gray-300 rounded-md"
-                          placeholder="1234 5678 9012 3456">
-                  </div>
+            <div class="mb-4">
+              <label class="text-textPri font-semibold mb-2">Card Number</label>
+              <input
+                id="cardNumber"
+                type="number"
+                class="w-full p-3 border border-gray-300 rounded-md"
+                placeholder="1234 5678 9012 3456"
+              />
+            </div>
 
-                  <div class="flex gap-3">
-                      <div class="mb-4">
-                          <label class=" text-textPri font-semibold mb-2">VCC (CVV)</label>
-                          <input id="vcc" type="number" class="w-full p-3 border border-gray-300 rounded-md"
-                              placeholder="123">
-                      </div>
-
-                      <div class="mb-4">
-                          <label class=" text-textPri font-semibold mb-2">Expiry Date</label>
-                          <input id="expiryDate" type="month" class="w-full p-3 border border-gray-300 rounded-md"
-                              placeholder="August 2026">
-                      </div>
-                  </div>
-
-                  <button id="rechargeNowBtn"
-                      class="w-full bg-primary font-bold py-3 rounded-md hover:bg-primary50 focus:outline-none">Recharge
-                      Now</button>
+            <div class="flex gap-3">
+              <div class="mb-4">
+                <label class="text-textPri font-semibold mb-2">VCC (CVV)</label>
+                <input
+                  id="vcc"
+                  type="number"
+                  class="w-full p-3 border border-gray-300 rounded-md"
+                  placeholder="123"
+                />
               </div>
+
+              <div class="mb-4">
+                <label class="text-textPri font-semibold mb-2"
+                  >Expiry Date</label
+                >
+                <input
+                  id="expiryDate"
+                  type="month"
+                  class="w-full p-3 border border-gray-300 rounded-md"
+                  placeholder="August 2026"
+                />
+              </div>
+            </div>
+
+            <button
+              id="rechargeNowBtn"
+              class="w-full bg-primary font-bold py-3 rounded-md hover:bg-primary50 focus:outline-none"
+            >
+              Recharge Now
+            </button>
           </div>
+        </div>
       </div>
       <!-- RECHARGE CONFIRMATION MODAL -->
       <div class="hidden" id="rechargeConfirmModal">
-          <div class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center">
-              <div
-                  class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px] h-[320px] flex flex-col items-center justify-center gap-3">
-                  <h1 class="font-extrabold text-4xl">Recharge Successful!</h1>
-                  <img src="./assets/coin.png" alt="">
-                  <p class="text-center">Your recharge was successful! Thank you for your contribution.</p>
-                  <p class="text-xl font-bold">Check Your Balance.</p>
-                  <button id="closeRechargeConfirm"
-                      class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md">Close
-                      Confirmation</button>
-              </div>
+        <div
+          class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+        >
+          <div
+            class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px] h-[320px] flex flex-col items-center justify-center gap-3"
+          >
+            <h1 class="font-extrabold text-3xl text-center">
+              Recharge Successful!
+            </h1>
+            <img src="./assets/coin.png" alt="" />
+            <p class="text-center">
+              Your recharge was successful! Thank you for your contribution.
+            </p>
+            <p class="text-xl font-bold">Check Your Balance.</p>
+            <button
+              id="closeRechargeConfirm"
+              class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md"
+            >
+              Close Confirmation
+            </button>
           </div>
+        </div>
       </div>
-  </main>
+      <!-- RECHARGE FIELD FILL -->
+      <div class="hidden" id="rechargeFieldModal">
+        <div
+          class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+        >
+          <div
+            class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px] flex flex-col items-center justify-center gap-3"
+          >
+            <h1 class="font-extrabold text-4xl text-center">
+              Ensure no fields are left blank!
+            </h1>
+            <p class="font-xl text-accent text-5xl">
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </p>
+            <p class="text-center">Please complete all required fields.</p>
+            <button
+              id="closeRechargeField"
+              class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- RECHARGE Invalid Input -->
+      <div class="hidden" id="rechargeInvalidModal">
+        <div
+          class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+        >
+          <div
+            class="bg-white shadow-xl rounded-lg p-5 w-[90%] sm:w-[430px] flex flex-col items-center justify-center gap-3"
+          >
+            <h1 class="font-extrabold text-4xl text-center">
+              Please check your inputs!
+            </h1>
+            <p class="font-xl text-accent text-5xl">
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </p>
+            <p class="text-center">
+              Ensure that all fields are correctly filled.
+            </p>
+            <button
+              id="closeRechargeInvalid"
+              class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./JS/utilities.js"></script>
     <script src="./JS/index.js"></script>
   </body>
