@@ -1,4 +1,154 @@
-What is the Document Object Model (DOM)?
-How do you select an element from the DOM?
-What is event delegation in the context of the DOM, and why is it useful?
-How do you manipulate an element's attributes and styles using the DOM?
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Welcome to blog cum DOM FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#A2D5C6",
+              primary50: "rgba(162, 213, 198, 0.3)",
+              accent: "#F9E79F",
+              textPri: "#34495E",
+              textSec: "#34495E99",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/12c401b8a1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="font-family: 'Lexend', sans-serif">
+    <header>
+      <div class="bg-primary fixed z-50 w-full">
+        <nav
+          class="container mx-auto flex justify-between items-center py-4 px-5"
+        >
+          <div>
+            <button
+              id="homePage"
+              class="py-3 px-5 md:px-8 font-bold bg-accent rounded-lg"
+            >
+              H<span class="hidden md:block">ome</span>
+            </button>
+          </div>
+          <div class="flex items-center gap-4">
+            <img class="w-8 md:w-full" src="./assets/logo.png" alt="Logo Icon" />
+            <p class="hidden md:block font-bold text-xl">GiftChange</p>
+          </div>
+          <div class="font-bold text-textPri flex flex-col md:flex-row items-center gap-1 text-xl">
+            <img class="mr-2" src="./assets/coin.png" alt="Coin" />
+            <span id="accountBalance">55000</span>
+            <span class="hidden md:block">BDT</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="pt-28 container mx-auto px-5">
+      <h1>Welcome To Blog Cum DOM FAQ</h1>
+      <div class="bg-gray-300 p-5 rounded-xl mt-5">
+        <h1
+          onclick="openAccordion(this)"
+          class="cursor-pointer text-2xl font-bold"
+        >
+          What is the Document Object Model (DOM)?
+        </h1>
+        <p class="mt-3 ml-3 hidden">
+          We use HTML to create the structure of the website and CSS to give the
+          design and and the color of it. However, to make it lively and
+          interactive we have to use JavaScript which is actually a Programming
+          language. But as we know JavaScript does not understands the HTML
+          Elements so it but it can understand object so DOM objectifies the
+          entire HTML file (which is kind of a document file like MS Word) into
+          an object. And this object is kind of a tree like structure or we can
+          say model.
+        </p>
+      </div>
+
+      <div class="bg-gray-300 p-5 rounded-xl mt-5">
+        <h1
+          onclick="openAccordion(this)"
+          class="cursor-pointer text-2xl font-bold"
+        >
+          How do you select an element from the DOM?
+        </h1>
+        <p class="mt-3 ml-3 hidden">
+          There are 2 (two) ways of selecting a DOM element one is Element
+          Selector another one is querySelector. With the help of element
+          selector we can select DOM Elements by getElementById,
+          getElementsByClassName, getElementsByTagName. It will give us result
+          accordingly. by the help of querySelector we can not only select by
+          the Tag, Class and ID but also all the CSS selector. querySelector
+          takes the css selector and select the DOM elements for example -
+          querySelector("#id"), querySelector("nav > ul li"). This selector is
+          more flexible than the Element selector.
+        </p>
+      </div>
+      <div class="bg-gray-300 p-5 rounded-xl mt-5">
+        <h1
+          onclick="openAccordion(this)"
+          class="cursor-pointer text-2xl font-bold"
+        >
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </h1>
+        <p class="mt-3 ml-3 hidden">
+          In DOM event delegation is the process which take the help of event
+          bubbling to catch the event from child element. If we have hundreds of
+          similar elements in our website we don't need to addEventListener to
+          each element. We can just add the listener on the parent element and
+          use the event.target property to addEventListener on each child
+          element. This is useful in many ways like, This make the code short as
+          we are only adding 1 listener for 100 elements. It make the code
+          simple and clean. And reduce mistakes as we are doing less code.
+        </p>
+      </div>
+      <div class="bg-gray-300 p-5 rounded-xl mt-5">
+        <h1
+          onclick="openAccordion(this)"
+          class="cursor-pointer text-2xl font-bold"
+        >
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </h1>
+        <p class="mt-3 ml-3 hidden">
+          There are properties in DOM to manipulate the style in DOM Elements.
+          if i talk about the Style there is element.style property where i can
+          apply all the CSS properties like color, font size, display, but we
+          have to make sure that the property name is on camelCase- for example:
+          backgroundColor, fontSize. after that we cam put "value". eg:
+          element.style.color = "red". Moreover we can set style in a class and
+          add the class in the element, we can also remove the class but the
+          help of classList property and functions like add(), remove(). there
+          are more functions like my favorite toggle(). Which I have used in ths
+          accordion. <br />
+          We can also set attribute to the dom elements like id, disabled, &
+          type. we can use functions like getAttribute() = to get value of
+          attribute, setAttribute() = to set attribute for an element and
+          removeAttribute() = to remove attribute of an element. 
+        </p>
+      </div>
+    </main>
+    <footer class="bg-primary50 mt-20">
+      <div class="py-8">
+        <p class="text-center text-[#6ea091]">
+          © 2024 GiftForChange. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="./JS/blog.js"></script>
+  </body>
+</html>

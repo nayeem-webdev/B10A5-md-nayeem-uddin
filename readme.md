@@ -7,6 +7,7 @@
   - "Blog" button on the left. <!--* DONE-->
   - Account balance with a coin icon on the right. <!--* DONE-->
   - "Donation" and "History" buttons in the center (as per Figma). <!--* DONE-->
+
 - **Donation Cards**: Create 3 donation cards with the following details:
   - Image on the left. <!--* DONE-->
   - Donation title. <!--* DONE-->
@@ -16,7 +17,7 @@
   - Button for submitting the donation. <!--* DONE-->
 - **History Section**: Initially hidden and empty. <!--* DONE-->
 
-## Functionalities
+## Functionalities <!--! ALL COVERED-->
 
 - **Donation and History Button Functionality**:
   - Clicking the "History" button will hide the donation data and display the history. <!--* DONE-->
@@ -29,11 +30,11 @@
     - A meaningful notification will be added to the History section. <!--* DONE-->
 
 - **Input Validation**:
-  - Show an alert if invalid data is found and stop the transaction.
+  - Show an alert if invalid data is found and stop the transaction. <!--* DONE-->
   - Validate the donation amount:
-    - If the donation amount is greater than the account balance.
-    - If the input field contains an invalid number.
-    - If the input field is empty.
+    - If the donation amount is greater than the account balance. <!--* DONE-->
+    - If the input field contains an invalid number. <!--* DONE-->
+    - If the input field is empty. <!--* DONE-->
 
 - **History Section**:
   - The history section will display transaction notifications, including:
@@ -46,17 +47,17 @@
 - **Sticky Navbar**: Make the navbar sticky to the top of the page. <!--* DONE-->
 
 - **Blog Page**: Create a `blog.html` file and link it to the main page: <!--* DONE-->
-  - The blog page should contain 4 questions and their answers:
-    1. What is the Document Object Model (DOM)?
-    2. How do you select an element from the DOM?
-    3. What is event delegation in the context of the DOM, and why is it useful?
-    4. How do you manipulate an element's attributes and styles using the DOM?
+  - The blog page should contain 4 questions and their answers: 
+    1. What is the Document Object Model (DOM)?  <!--* DONE-->
+    2. How do you select an element from the DOM? <!--* DONE-->
+    3. What is event delegation in the context of the DOM, and why is it useful? <!--* DONE-->
+    4. How do you manipulate an element's attributes and styles using the DOM? <!--* DONE-->
 
 - **Toggle Active Status**: Toggle the active status of the "Donation" and "History" buttons:
   - Change the button color to indicate when it's active. <!--* DONE-->
 
-- **Static Modal**: Display a static modal instead of an alert on a successful donation.
+- **Static Modal**: Display a static modal instead of an alert on a successful donation.  <!--* DONE-->
 
 - **Reusable Functions**: Use at least 2 common functions. <!--* DONE-->
 
-- **Responsive Design**: Ensure the application is responsive for different screen sizes.
+- **Responsive Design**: Ensure the application is responsive for different screen sizes.  <!--* DONE-->
