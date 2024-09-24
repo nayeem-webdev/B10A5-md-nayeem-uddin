@@ -1,3 +1,8 @@
+// Close Welcome
+document.getElementById("closeWelcome").addEventListener("click", function(){
+  document.getElementById("welcomeModal").classList.add("hidden")
+})
+
 // * Donation History Button Toggle
 document.getElementById("donateBtn").addEventListener("click", function () {
   const donateBtn = document.getElementById("donateBtn");
@@ -61,6 +66,12 @@ document
   .addEventListener("click", function () {
     openModal("rechargeModal", "rechargeModalClose");
   });
+// * Recharge Modal
+document
+  .getElementById("floatingRecharge")
+  .addEventListener("click", function () {
+    openModal("rechargeModal", "rechargeModalClose");
+  });
 
 // * Recharge
 document
@@ -96,3 +107,5 @@ document
       openModal("rechargeInvalidModal", "closeRechargeInvalid");
     }
   });
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Button</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar (Fixed) -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+      <div class="max-w-7xl mx-auto px-4 py-4">
+        <h1 class="text-xl font-bold">My Navbar</h1>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 max-w-7xl mx-auto px-4 py-16">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold mb-8">Welcome to the Hero Section</h2>
+        <button class="btn-primary mr-4">Button 1</button>
+        <button class="btn-primary">Button 2</button>
+      </div>
+    </section>
+
+    <!-- Floating Button (Initially Hidden) -->
+    <div
+      id="floatingButton"
+      class="hidden fixed left-0 right-0 mx-auto w-1/2 px-4 py-3 bg-white bg-opacity-80 backdrop-blur-md rounded-lg shadow-lg z-40"
+    >
+      <div class="flex justify-center space-x-4">
+        <button class="btn-primary">Button 1</button>
+        <button class="btn-primary">Button 2</button>
+      </div>
+    </div>
+    <div class="py-96"></div>
+    <div class="py-96"></div>
+    <div class="py-96"></div>
+
+    <!-- Script for Scroll Behavior -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const floatingButton = document.getElementById("floatingButton");
+        const heroSection = document.querySelector("section");
+        const navHeight = document.querySelector("nav").offsetHeight;
+
+        // Show button when hero section is scrolled past
+        if (window.scrollY > heroSection.offsetHeight - navHeight) {
+          floatingButton.classList.remove("hidden");
+        } else {
+          floatingButton.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -42,49 +42,29 @@
               id="blogPage"
               class="py-3 px-5 sm:px-8 font-bold bg-accent rounded-lg"
             >
-            <span class="hidden sm:block">Blog</span>
-            <span class="block sm:hidden">B</span>
+              <span class="hidden sm:block">Blog</span>
+              <span class="block sm:hidden">B</span>
             </button>
           </div>
           <div class="flex items-center gap-4">
-            <img class="w-8 sm:w-full" src="./assets/logo.png" alt="Logo Icon" />
-            <p class=" hidden sm:block font-bold text-xl">GiftChange</p>
+            <img
+              class="w-8 sm:w-full"
+              src="./assets/logo.png"
+              alt="Logo Icon"
+            />
+            <p class="hidden sm:block font-bold text-xl">GiftChange</p>
             <!-- <p class="font-bold text-lg">GC</p> -->
           </div>
-          <div class="font-bold text-textPri flex flex-col sm:flex-row items-center gap-1 text-xl">
+          <div
+            class="font-bold text-textPri flex flex-col sm:flex-row items-center gap-1 text-xl"
+          >
             <img class="mr-2" src="./assets/coin.png" alt="Coin" />
-            <span id="accountBalance">55000</span>
+            <span id="accountBalance">500</span>
             <span class="hidden sm:block">BDT</span>
           </div>
         </nav>
       </div>
       <!-- Sticky donation -->
-      <div
-        class="hidden fixed w-full z-40 pt-[120px] bg-cover bg-no-repeat bg-center py-4"
-        style="
-          background-image: linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0.5),
-              rgba(0, 0, 0, 0.9)
-            ),
-            url('./assets/floodHero.jpg');
-        "
-      >
-        <div class="flex gap-3 items-center justify-center">
-          <button
-            id="donateBtnSticky"
-            class="px-5 py-3 bg-primary font-bold text-xl border-4 border-primary rounded-lg hover:bg-primary50 hover:text-primary"
-          >
-            Donate Now
-          </button>
-          <button
-            id="historyBtnSticky"
-            class="px-5 py-3 text-primary font-bold text-xl border-4 border-primary rounded-lg hover:bg-primary50 hover:text-primary"
-          >
-            Donation History
-          </button>
-        </div>
-      </div>
     </header>
     <main class="px-5 pt-28">
       <!-- Cover -->
@@ -289,15 +269,46 @@
           </div>
         </div>
       </div>
+      <!-- Floating Recharge button -->
+      <div>
+        <button id="floatingRecharge" class="bg-primary text-textPri p-3 md:p-5 rounded-full fixed bottom-28 right-5 flex gap-2 font-bold justify-center items-center">
+          <img src="./assets/coin.png" alt="">
+          <p class="hidden md:block">Recharge</p>
+        </button>
+      </div>
     </main>
-    <footer class="bg-primary50 mt-20">
+
+    <footer class="bg-primary50 mt-28">
       <div class="py-8">
         <p class="text-center text-[#6ea091]">
           © 2024 GiftForChange. All rights reserved.
         </p>
       </div>
     </footer>
-    <main>
+
+    <div>
+      <!-- Welcome MODAL -->
+      <div class="block" id="welcomeModal">
+        <div
+          class="bg-black bg-opacity-40 h-screen fixed inset-0 flex items-center justify-center"
+        >
+          <div
+            class="bg-white shadow-xl rounded-lg p-5 w-[90%] md:w-[500px] flex flex-col items-center justify-center gap-3"
+          >
+            <h1 class="font-extrabold text-4xl">Welcome!</h1>
+            <img src="./assets/coin.png" alt="" />
+            <p class="text-center">Congratulations! You have awarded 500 BDT signup bonus! </p>
+            <p class="text-center"><strong>Don't worry!</strong> <br> You can  Recharge more: Just click the Bottom-Right Recharge button insert amount, any 16 digit CARD number, 3 digit VCC code and M & Y. Now you are good to go.</p>
+            <p class="text-xl font-bold">Happy Donating!</p>
+            <button
+              id="closeWelcome"
+              class="bg-gray-300 hover:bg-gray-200 font-bold mt-3 py-3 px-6 rounded-md"
+            >
+              Close Confirmation
+            </button>
+          </div>
+        </div>
+      </div>
       <!-- DONATION MODAL -->
       <div class="hidden" id="donationModal">
         <div
@@ -519,7 +530,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </div>
     <script src="./JS/utilities.js"></script>
     <script src="./JS/index.js"></script>
   </body>
